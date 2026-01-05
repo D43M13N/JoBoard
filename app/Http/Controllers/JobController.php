@@ -16,9 +16,9 @@ class JobController extends Controller
             'Web Developer',
             'PHP Developer',
             'Ruby Developer',
-            'Linux Administrator',
+            'Linux Administrator'
         ];
-        return view('jobs.index', compact($jobs));
+        return view('jobs.index', compact('jobs'));
     }
 
     /**
@@ -40,9 +40,9 @@ class JobController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id): string
+    public function show(string $id): view
     {
-        return "show";
+        return view('jobs.show');
 
     }
 
