@@ -10,6 +10,7 @@
                     <x-nav-link url="/login" :active="request()->is('login')">Login</x-nav-link>
                     <x-nav-link url="/register" :active="request()->is('register')">Register</x-nav-link>
                     <x-nav-link url="/dashboard" :active="request()->is('dashboard')" icon="gauge">Dashboard</x-nav-link>
+                    <x-button-link url="/jobs/create" icon="edit">Dashboard</x-nav-link>
                 </nav>
                 <button
                     id="hamburger"
