@@ -9,10 +9,14 @@
           crossorigin="anonymous" 
           referrerpolicy="no-referrer" />
     @vite('resources/css/app.css')
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <title>{{$title ?? "Joboard"}}</title>
 </head>
 <body class="bg-gray-100">
     <x-header />
+    @if(request()->is('/'))
+    <x-hero />
+    @endif
     <main class="container mx-auto p-4 mt-4">
         {{$slot}}
     </main>
