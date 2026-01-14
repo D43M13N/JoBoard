@@ -23,13 +23,14 @@ return new class extends Migration
             $table->boolean('remote')->default(false);
             $table->string('requirements')->nullable();
             $table->string('benefits')->nullable();
-            $table->string('adress')->nullable();
+            $table->string('address')->nullable();
             $table->string('city');
             $table->string('state');
             $table->string('zipcode')->nullable();
             $table->string('contact_phone')->nullable();
             $table->string('company_name');
-            $table->string('company_description')->nullable();
+            $table->string('contact_email')->nullable();
+            $table->text('company_description')->nullable();
             $table->string('company_logo')->nullable();
             $table->string('company_website')->nullable();
 
