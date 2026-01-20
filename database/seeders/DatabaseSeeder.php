@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         DB::statement("SET foreign_key_checks = 0");
         DB::table('job_listings')->truncate();
         DB::table('users')->truncate();
+        DB::statement("SET foreign_key_checks = 1");
 
         $this->call(RandomUserSeeder::class);
         $this->call(JobSeeder::class); 
