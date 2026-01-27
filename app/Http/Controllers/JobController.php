@@ -50,6 +50,7 @@ class JobController extends Controller
      */
     public function show(Job $job): string
     {
+        $job = 'job';
         return view('jobs.show')->with('job', $job);
 
     }
