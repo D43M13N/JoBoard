@@ -50,7 +50,7 @@
                                 </li>
                                 <li class="mb-2">
                                     <strong>Tags:</strong>
-                                    {{ucwords(str_replace(',', ', '))}}
+                                    {{ucwords(str_replace(', ',', ', $job->tags))}}
                                 </li>
                             </ul>
                         </div>
@@ -98,17 +98,16 @@
                         Company Info
                     </h3>
                     <img
-                        src="/images/{{$job->company_logos}}"
+                        src="/images/{{$job->company_logo}}"
                         alt="Ad"
                         class="w-full rounded-lg mb-4 m-auto"
                     />
-                    <h4 class="text-lg font-bold">Algorix</h4>
+                    <h4 class="text-lg font-bold">{{$job->company_name}}</h4>
                     <p class="text-gray-700 text-lg my-3">
-                        We are a leading software development company in New
-                        York.
+                        {{$job->company_description}}
                     </p>
                     <a
-                        href="https://sparkle.test"
+                        href="{{$job->company_website}}"
                         target="_blank"
                         class="text-blue-500"
                         >Visit Website</a
